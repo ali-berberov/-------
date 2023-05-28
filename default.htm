@@ -1,0 +1,170 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html  xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<meta http-equiv="Content-Language" content="en"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Терекле</title>
+<meta name="description" content="Summary report of Терекле containing 4083 individuals and 1216 families. This report describes the genealogy and ancestry of families&nbsp;Жабоев, Темукуев, Темукуева, Кучуков, Жангуразов, Кучукова, Жангуразова, Азаматов, Башиев, Бозиев." />
+<meta name="keywords" content="Family Report, Genealogy Report, Family Tree, Family Search" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico?" />
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script type='text/javascript' src="scripts/jquery.min.js"></script>
+<script type='text/javascript' src="scripts/script.js"></script>
+<script type="text/javascript">
+
+var basepath, setRhs = "*,65%", minRhs="0,*", setLower="30%,*", saveLower, minLower="0,*", setPopup, popupToggleState, 
+	frameLower, frameRhs, maxPopups=false;
+
+
+basepath = window.location.pathname;
+
+
+// if (window.location.protocol == 'file:') alert('Reports viewed locally via the \'file\' protocol may not work correctly in some browsers due to frameset issues. Consider using a local web server instead.\n e.g. Web Server for Chrome');
+
+if (!maxPopups) {
+	if (window.location.search.indexOf('max=true') >= 0) {
+		maxPopups = true;
+	} else if (SmartPhone.isAny() || smallScreen()) {
+		maxPopups = confirm('Optimize presentation for smaller screen?');
+	}
+}	
+if (maxPopups ) {
+	setPopup = '100%';
+	saveLower=saveLower2="100%,0";
+} else {
+	setPopup ='65%';
+	saveLower=saveLower2="30%,*";
+}
+	var frameBorders = true;
+	var iconMenu = false;
+
+var actions = {
+	title : 		function(msg) {
+						window.document.title = msg;
+					},
+	hidePopup : 	function(msg) {
+						document.getElementById('rhs').rows="*,0";
+						$.postMessage('page='+(msg ? msg :'popup.htm'),window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+					},
+	maxPopup : 		function() {
+						if (frameLower.cols != "0,*") saveLower = frameLower.cols;
+						frameLower.cols = "0,*";
+						frameRhs.rows = "0,*";
+						popupToggleState = 'max';
+					},
+	restorePopup : 	function() {
+						frameRhs.rows = setRhs;
+						popupToggleState = 'restored';
+					},
+	openPopup : 	function(popup) {
+						$.postMessage('page=popup.htm',window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+						actions.showPopup();
+						$.postMessage('page='+popup,window.location.protocol == 'file:' ? '*' : window.location.href,window.frames["popup"]);
+					},
+	showHome :		function() {
+						window.location = 'default.htm' + (maxPopups ? '?max=true' : '');
+					},
+	showPopup : 	function(msg) {
+						if (popupToggleState == "max") {  // if popup previously maximised, reset it to normal size.
+							document.getElementById('rhs').rows = setRhs;
+						}
+						var pc=(msg ? msg : setPopup);
+						if(maxPopups || document.getElementById('rhs').rows=="*,0" || pc != "")      // don't change if already changed by user
+						{	
+							document.getElementById('rhs').rows="*,"+pc;
+							popupToggleState = (pc == '100%' ?  "max" : "restored");
+						}
+					},
+	hideMap	  : 	function() {
+						actions.hidePopup('popup.htm');
+					},
+	hideTOC :		function(popup) {
+						if (frameLower.cols && frameLower.cols != minLower) saveLower = frameLower.cols;
+						frameLower.cols = minLower;
+						if (popup) actions.openPopup(popup);
+					},
+	showTOC :		function(toc) {
+						$.postMessage('page='+toc+(toc.indexOf('?')>0 ? ',' : '?' ) + 'close='+ (maxPopups ? 'Y' : 'N' ), window.location.protocol == 'file:' ? '*' : window.location.href, window.frames["toc"]);
+						document.getElementById('lower').cols = saveLower;
+					}
+	}
+
+$.receiveMessage(function(e){
+	// console.log('receiveMessage', e.data); //debug
+
+	var parts =typeof e.data == 'string' ? e.data.split('=') : '';
+	var msg = (parts.length > 1 ? e.data.substr(parts[0].length+1) : null);
+	if ((e.origin == "null" || e.origin == location.origin) && parts[0] in actions) {
+		actions[parts[0]](msg);
+	} else {
+		console.log('default.htm@$.receiveMessage: no action taken for message \''+e.data + '\' from '+e.origin);
+	}
+});
+
+// Open an individual page if specified in the querystring or referrer
+function HomePageInit() {
+  //	HISTORY
+  //	12-Oct-2006	GenoPro			Creation
+
+	// check if a url is specify in the querystring
+	var indexPageToLoad = location.search.indexOf("page=");
+	if (indexPageToLoad != -1) {
+		var pageToLoad = location.search.substring(indexPageToLoad + 5); // page= is 5 characters width
+		self.frames['detail'].location = pageToLoad;
+	}
+}
+function fixFrameSet(framesetObj, topFrame) {
+         var rows = framesetObj.getAttribute("rows"), cols = framesetObj.getAttribute("cols"); 
+         if (frameBorders) {
+            framesetObj.setAttribute("border","2");
+            framesetObj.setAttribute("framespacing","1");
+         }else{
+            framesetObj.setAttribute("framespacing","0");
+            framesetObj.setAttribute("border","0");
+         };
+         if (rows) framesetObj.setAttribute("rows", rows);
+         if (cols) framesetObj.setAttribute("cols", cols);
+         if (topFrame) {
+            fixFrameSet(document.getElementById("lower"), false);
+            fixFrameSet(document.getElementById("rhs"), false);
+         }
+}
+$(function () {
+		fixFrameSet(document.body, true);
+		document.getElementById("rhs").rows="*,1";
+		document.getElementById("rhs").rows="*,0";
+		frameLower = document.getElementById('lower');
+		frameRhs = document.getElementById('rhs');
+}
+);
+</script>
+</head>
+<frameset id="outer" rows="80,*" onload="javascript:HomePageInit();">
+    <frame name="heading" src="heading.htm" scrolling="no" style="margin-width:2px;border-color:silver;"/>
+    <frameset id="lower" cols="0,*">
+        <frame style="margin-width:2px;border-color:silver;" name="toc" src="toc_individuals.htm" marginwidth='10' marginheight='15'/>
+    		<frameset id="rhs" rows="*,0">
+    			<frame style="margin-width:2px;border-color:silver;" name="detail" id="detail" src="home.htm" scrolling="auto" marginwidth='5' marginheight='15'/> 
+    			<frame style="margin-width:2px;border-color:silver;" name="popup" id="popup" src="popup.htm" scrolling="auto" marginwidth='5' marginheight='5'/>
+    		</frameset>
+	  </frameset>
+    <noframes>
+      <body>    
+         <p id="noframes">
+This <b>genealogy report</b> is about <i>Терекле</i>.It contains 4083 individuals and 1216 families, and also 1 Picture from the family tree. <br /></p><ul>
+<li><a href='toc_individuals.htm#Жабоев'>Find the Жабоев family and its 342 ancestors.</a>.</li>
+<li><a href='toc_individuals.htm#Темукуев'>Search the Темукуев family and its 285 persons.</a>.</li>
+<li><a href='toc_individuals.htm#Темукуева'>Find the Темукуева family and its 236 persons.</a>.</li>
+<li><a href='toc_individuals.htm#Кучуков'>Search the Кучуков family and its 196 people.</a>.</li>
+</ul><p>
+You may also search for the following family names:
+<a href='toc_individuals.htm#Жангуразов'>Жангуразов</a>, <a href='toc_individuals.htm#Кучукова'>Кучукова</a>, <a href='toc_individuals.htm#Жангуразова'>Жангуразова</a>, <a href='toc_individuals.htm#Азаматов'>Азаматов</a>, <a href='toc_individuals.htm#Башиев'>Башиев</a>, <a href='toc_individuals.htm#Бозиев'>Бозиев</a>, <a href='toc_individuals.htm#Бозиева'>Бозиева</a>, <a href='toc_individuals.htm#Малкаруков'>Малкаруков</a>, <a href='toc_individuals.htm#Берберов'>Берберов</a>, <a href='toc_individuals.htm#Беккаев'>Беккаев</a>, <a href='toc_individuals.htm#Berber'>Berber</a>, <a href='toc_individuals.htm#Жаниюков'>Жаниюков</a>, <a href='toc_individuals.htm#Ногерова'>Ногерова</a>, <a href='toc_individuals.htm#Настуев'>Настуев</a>, <a href='toc_individuals.htm#Ногеров'>Ногеров</a>, <a href='toc_individuals.htm#Настуева'>Настуева</a>, <a href='toc_individuals.htm#Жилкибаева'>Жилкибаева</a>, <a href='toc_individuals.htm#Берберова'>Берберова</a>, <a href='toc_individuals.htm#Малкарукова'>Малкарукова</a>, <a href='toc_individuals.htm#Азаматова'>Азаматова</a>, <a href='toc_individuals.htm#Жилкибаев'>Жилкибаев</a>, <a href='toc_individuals.htm#Атабиева'>Атабиева</a>, <a href='toc_individuals.htm#Уянаева'>Уянаева</a>, <a href='toc_individuals.htm#Ульбашев'>Ульбашев</a>, <a href='toc_individuals.htm#Аккиев'>Аккиев</a>, <a href='toc_individuals.htm#Уянаев'>Уянаев</a>, <a href='toc_individuals.htm#Гутаев'>Гутаев</a>, <a href='toc_individuals.htm#Башиева'>Башиева</a>, <a href='toc_individuals.htm#Атабиев'>Атабиев</a>, <a href='toc_individuals.htm#Ульбашева'>Ульбашева</a>, <a href='toc_individuals.htm#Мисиров'>Мисиров</a>, <a href='toc_individuals.htm#Гутаева'>Гутаева</a>, <a href='toc_individuals.htm#Чочаев'>Чочаев</a>, <a href='toc_individuals.htm#Тогузаев'>Тогузаев</a>, <a href='toc_individuals.htm#Кайгермазов'>Кайгермазов</a>, <a href='toc_individuals.htm#Жабоева'>Жабоева</a>, <a href='toc_individuals.htm#Аккиева'>Аккиева</a>, <a href='toc_individuals.htm#Мисирова'>Мисирова</a>, <a href='toc_individuals.htm#Сарсенбиева'>Сарсенбиева</a>, <a href='toc_individuals.htm#Сарсенбиев'>Сарсенбиев</a>, <a href='toc_individuals.htm#Мусукова'>Мусукова</a>, <a href='toc_individuals.htm#Бийногеров'>Бийногеров</a>, <a href='toc_individuals.htm#Аширбеков'>Аширбеков</a>, <a href='toc_individuals.htm#Чочаева'>Чочаева</a>, <a href='toc_individuals.htm#Созаев'>Созаев</a>, <a href='toc_individuals.htm#Османова'>Османова</a>, <a href='toc_individuals.htm#Каркаев'>Каркаев</a>, <a href='toc_individuals.htm#Гогуев'>Гогуев</a>, <a href='toc_individuals.htm#Газаев'>Газаев</a>, <a href='toc_individuals.htm#Биттирова'>Биттирова</a>, <a href='toc_individuals.htm#Биттиров'>Биттиров</a>, <a href='toc_individuals.htm#Асанова'>Асанова</a>, <a href='toc_individuals.htm#Узеев'>Узеев</a>, <a href='toc_individuals.htm#Тогузаева'>Тогузаева</a>, <a href='toc_individuals.htm#Османов'>Османов</a>, <a href='toc_individuals.htm#Муратбек'>Муратбек</a>, <a href='toc_individuals.htm#Глашева'>Глашева</a>, <a href='toc_individuals.htm#Глашев'>Глашев</a>, <a href='toc_individuals.htm#Гериева'>Гериева</a>, <a href='toc_individuals.htm#Газаева'>Газаева</a>, <a href='toc_individuals.htm#Узеева'>Узеева</a>, <a href='toc_individuals.htm#Сайназаров'>Сайназаров</a>, <a href='toc_individuals.htm#Кучмезова'>Кучмезова</a>, <a href='toc_individuals.htm#Елеева'>Елеева</a>, <a href='toc_individuals.htm#Доттуев'>Доттуев</a>, <a href='toc_individuals.htm#Джакеев'>Джакеев</a>, <a href='toc_individuals.htm#Боева'>Боева</a>, <a href='toc_individuals.htm#Атаев'>Атаев</a>, <a href='toc_individuals.htm#Хасауов'>Хасауов</a>, <a href='toc_individuals.htm#Текаев'>Текаев</a>, <a href='toc_individuals.htm#Маратбек'>Маратбек</a>, <a href='toc_individuals.htm#Кучменов'>Кучменов</a>, <a href='toc_individuals.htm#Каитова'>Каитова</a>, <a href='toc_individuals.htm#Дзугулов'>Дзугулов</a>, <a href='toc_individuals.htm#Гогуева'>Гогуева</a>, <a href='toc_individuals.htm#Гаева'>Гаева</a>, <a href='toc_individuals.htm#Аширбекова'>Аширбекова</a>, <a href='toc_individuals.htm#Эндреева'>Эндреева</a>, <a href='toc_individuals.htm#Хапаева'>Хапаева</a>, <a href='toc_individuals.htm#Урусбиев'>Урусбиев</a>, <a href='toc_individuals.htm#Туганов'>Туганов</a>, <a href='toc_individuals.htm#Созаева'>Созаева</a>, <a href='toc_individuals.htm#Сайназарова'>Сайназарова</a>, <a href='toc_individuals.htm#Мурачаев'>Мурачаев</a>, <a href='toc_individuals.htm#Мокаева'>Мокаева</a>, <a href='toc_individuals.htm#Мокаев'>Мокаев</a>, <a href='toc_individuals.htm#Мизиева'>Мизиева</a>, <a href='toc_individuals.htm#Мизиев'>Мизиев</a>, <a href='toc_individuals.htm#Малкаров'>Малкаров</a>, <a href='toc_individuals.htm#Кучменова'>Кучменова</a>, <a href='toc_individuals.htm#Карчаева'>Карчаева</a>, <a href='toc_individuals.htm#Каркаева'>Каркаева</a>, <a href='toc_individuals.htm#Калаханова'>Калаханова</a>, <a href='toc_individuals.htm#Каитов'>Каитов</a>, <a href='toc_individuals.htm#Кайгермазова'>Кайгермазова</a>, <a href='toc_individuals.htm#Казиева'>Казиева</a>, <a href='toc_individuals.htm#Женисбек къызы'>Женисбек къызы</a>, <a href='toc_individuals.htm#Елеев'>Елеев</a>, <a href='toc_individuals.htm#Динаев'>Динаев</a>, <a href='toc_individuals.htm#Гуппоева'>Гуппоева</a>, <a href='toc_individuals.htm#Гочияев'>Гочияев</a>, <a href='toc_individuals.htm#Балаев'>Балаев</a>, <a href='toc_individuals.htm#Аппаев'>Аппаев</a>, <a href='toc_individuals.htm#Акбулатов'>Акбулатов</a>, <a href='toc_individuals.htm#Абшаев'>Абшаев</a>, <a href='toc_individuals.htm#Абилгазиев'>Абилгазиев</a>, <a href='toc_individuals.htm#Абдуллаев'>Абдуллаев</a>, <a href='toc_individuals.htm#Эркенова'>Эркенова</a>, <a href='toc_individuals.htm#Хапаев'>Хапаев</a>, <a href='toc_individuals.htm#Узденова'>Узденова</a>, <a href='toc_individuals.htm#Токъсан'>Токъсан</a>, <a href='toc_individuals.htm#Токуева'>Токуева</a>, <a href='toc_individuals.htm#Текаева'>Текаева</a>, <a href='toc_individuals.htm#Суйдимов'>Суйдимов</a>, <a href='toc_individuals.htm#Настаева'>Настаева</a>, <a href='toc_individuals.htm#Настаев'>Настаев</a>, <a href='toc_individuals.htm#Мирзоев'>Мирзоев</a>, <a href='toc_individuals.htm#Махиева'>Махиева</a>, <a href='toc_individuals.htm#Маулит'>Маулит</a>, <a href='toc_individuals.htm#Магаяев'>Магаяев</a>, <a href='toc_individuals.htm#Къурманов'>Къурманов</a>, <a href='toc_individuals.htm#Кужонова'>Кужонова</a>, <a href='toc_individuals.htm#Койбаев'>Койбаев</a>, <a href='toc_individuals.htm#Киштыкова'>Киштыкова</a>, <a href='toc_individuals.htm#Киштыков'>Киштыков</a>, <a href='toc_individuals.htm#Калабекова'>Калабекова</a>, <a href='toc_individuals.htm#Калабеков'>Калабеков</a>, <a href='toc_individuals.htm#Доттуева'>Доттуева</a>, <a href='toc_individuals.htm#Джатдоева'>Джатдоева</a>, <a href='toc_individuals.htm#Джаппуева'>Джаппуева</a>, <a href='toc_individuals.htm#Джакеева'>Джакеева</a>, <a href='toc_individuals.htm#Герузова'>Герузова</a>, <a href='toc_individuals.htm#Гергокова'>Гергокова</a>, <a href='toc_individuals.htm#Гемсокуров'>Гемсокуров</a>, <a href='toc_individuals.htm#Геляхова'>Геляхова</a>, <a href='toc_individuals.htm#Гаев'>Гаев</a>, <a href='toc_individuals.htm#Гадиев'>Гадиев</a>, <a href='toc_individuals.htm#Болатова'>Болатова</a>, <a href='toc_individuals.htm#Боев'>Боев</a>, <a href='toc_individuals.htm#Байсиев'>Байсиев</a>, <a href='toc_individuals.htm#Байрамуков'>Байрамуков</a>, <a href='toc_individuals.htm#Ахматов'>Ахматов</a>, <a href='toc_individuals.htm#Аттоев'>Аттоев</a>, <a href='toc_individuals.htm#Аттасаов'>Аттасаов</a>, <a href='toc_individuals.htm#Апажев'>Апажев</a>, <a href='toc_individuals.htm#Анаев'>Анаев</a>, <a href='toc_individuals.htm#Аликберов'>Аликберов</a>, <a href='toc_individuals.htm#Аккаев'>Аккаев</a>, <a href='toc_individuals.htm#Аджиева'>Аджиева</a>, <a href='toc_individuals.htm#Аджиев'>Аджиев</a>, <a href='toc_individuals.htm#Абдумалик'>Абдумалик</a>, <a href='toc_individuals.htm#Абаева'>Абаева</a>, <a href='toc_individuals.htm#Эристаева'>Эристаева</a>, <a href='toc_individuals.htm#Эристаев'>Эристаев</a>, <a href='toc_individuals.htm#Эндреев'>Эндреев</a>, <a href='toc_individuals.htm#Шаханов'>Шаханов</a>, <a href='toc_individuals.htm#Шаутаева'>Шаутаева</a>, <a href='toc_individuals.htm#Шабатукова'>Шабатукова</a>, <a href='toc_individuals.htm#Чипчиков'>Чипчиков</a>, <a href='toc_individuals.htm#Хасауова'>Хасауова</a>, <a href='toc_individuals.htm#Хаджиев'>Хаджиев</a>, <a href='toc_individuals.htm#Хабеков'>Хабеков</a>, <a href='toc_individuals.htm#Тотрукова'>Тотрукова</a>, <a href='toc_individuals.htm#Токлуев'>Токлуев</a>, <a href='toc_individuals.htm#Тлеуберды'>Тлеуберды</a>, <a href='toc_individuals.htm#Теппеева'>Теппеева</a>, <a href='toc_individuals.htm#Теммоева'>Теммоева</a>, <a href='toc_individuals.htm#Теммоев'>Теммоев</a>, <a href='toc_individuals.htm#Таушинаев'>Таушинаев</a>, <a href='toc_individuals.htm#Танаянц'>Танаянц</a>, <a href='toc_individuals.htm#Суншев'>Суншев</a>, <a href='toc_individuals.htm#Соттаева'>Соттаева</a>, <a href='toc_individuals.htm#Семенова'>Семенова</a>, <a href='toc_individuals.htm#Сатыбалдиев'>Сатыбалдиев</a>, <a href='toc_individuals.htm#Рахаева'>Рахаева</a>, <a href='toc_individuals.htm#Питталис'>Питталис</a>, <a href='toc_individuals.htm#Оразаев'>Оразаев</a>, <a href='toc_individuals.htm#Мечукаева'>Мечукаева</a>, <a href='toc_individuals.htm#Малкондуева'>Малкондуева</a>, <a href='toc_individuals.htm#Малкондуев'>Малкондуев</a>, <a href='toc_individuals.htm#Кучмезов'>Кучмезов</a>, <a href='toc_individuals.htm#Курманова'>Курманова</a>, <a href='toc_individuals.htm#Кубадиев'>Кубадиев</a>, <a href='toc_individuals.htm#Келеметов'>Келеметов</a>, <a href='toc_individuals.htm#Карчаев'>Карчаев</a>, <a href='toc_individuals.htm#Калаханов'>Калаханов</a>, <a href='toc_individuals.htm#Изембаева'>Изембаева</a>, <a href='toc_individuals.htm#Изембаев'>Изембаев</a>, <a href='toc_individuals.htm#Зумакулова'>Зумакулова</a>, <a href='toc_individuals.htm#Зокаева'>Зокаева</a>, <a href='toc_individuals.htm#Зокаев'>Зокаев</a>, <a href='toc_individuals.htm#Занибекова'>Занибекова</a>, <a href='toc_individuals.htm#Жолабова'>Жолабова</a>, <a href='toc_individuals.htm#Жекеева'>Жекеева</a>, <a href='toc_individuals.htm#Дугоев'>Дугоев</a>, <a href='toc_individuals.htm#Дзугулова'>Дзугулова</a>, <a href='toc_individuals.htm#Джаппуев'>Джаппуев</a>, <a href='toc_individuals.htm#Джанибеков'>Джанибеков</a>, <a href='toc_individuals.htm#Гуппоев'>Гуппоев</a>, <a href='toc_individuals.htm#Гузоев'>Гузоев</a>, <a href='toc_individuals.htm#Гузиева'>Гузиева</a>, <a href='toc_individuals.htm#Гузеева'>Гузеева</a>, <a href='toc_individuals.htm#Гочияева'>Гочияева</a>, <a href='toc_individuals.htm#Гижгиева'>Гижгиева</a>, <a href='toc_individuals.htm#Герузов'>Герузов</a>, <a href='toc_individuals.htm#Гериев'>Гериев</a>, <a href='toc_individuals.htm#Гергоков'>Гергоков</a>, <a href='toc_individuals.htm#Гасиева'>Гасиева</a>, <a href='toc_individuals.htm#Гадиева'>Гадиева</a>, <a href='toc_individuals.htm#Буркитжан'>Буркитжан</a>, <a href='toc_individuals.htm#Боташева'>Боташева</a>, <a href='toc_individuals.htm#Биттуева'>Биттуева</a>, <a href='toc_individuals.htm#Биттуев'>Биттуев</a>, <a href='toc_individuals.htm#Беккиева'>Беккиева</a>, <a href='toc_individuals.htm#Батырхан'>Батырхан</a>, <a href='toc_individuals.htm#Батчаева'>Батчаева</a>, <a href='toc_individuals.htm#Баркарь'>Баркарь</a>, <a href='toc_individuals.htm#Баллуева'>Баллуева</a>, <a href='toc_individuals.htm#Баллиева'>Баллиева</a>, <a href='toc_individuals.htm#Бакуева'>Бакуева</a>, <a href='toc_individuals.htm#Байдаева'>Байдаева</a>, <a href='toc_individuals.htm#Ахматова'>Ахматова</a>, <a href='toc_individuals.htm#Ахкубеков'>Ахкубеков</a>, <a href='toc_individuals.htm#Аттоева'>Аттоева</a>, <a href='toc_individuals.htm#Аттасаова'>Аттасаова</a>, <a href='toc_individuals.htm#Асанов'>Асанов</a>, <a href='toc_individuals.htm#Анаева'>Анаева</a>, <a href='toc_individuals.htm#Амангельди'>Амангельди</a>, <a href='toc_individuals.htm#Алтуева'>Алтуева</a>, <a href='toc_individuals.htm#Алибек къызы'>Алибек къызы</a>, <a href='toc_individuals.htm#Акбулатова'>Акбулатова</a>, <a href='toc_individuals.htm#Айшаева'>Айшаева</a>, <a href='toc_individuals.htm#Айшаев'>Айшаев</a>, <a href='toc_individuals.htm#Ажоева'>Ажоева</a>, <a href='toc_individuals.htm#Абдуллаева'>Абдуллаева</a>, <a href='toc_individuals.htm#Яковлева'>Яковлева</a>, <a href='toc_individuals.htm#Юсупова'>Юсупова</a>, <a href='toc_individuals.htm#Этезова'>Этезова</a>, <a href='toc_individuals.htm#Эсмурзаева'>Эсмурзаева</a>, <a href='toc_individuals.htm#Эльканова'>Эльканова</a>, <a href='toc_individuals.htm#Элчипарова'>Элчипарова</a>, <a href='toc_individuals.htm#Эдакаев'>Эдакаев</a>, <a href='toc_individuals.htm#Эбзеева'>Эбзеева</a>, <a href='toc_individuals.htm#Шурдумова'>Шурдумова</a>, <a href='toc_individuals.htm#Шунгарова'>Шунгарова</a>, <a href='toc_individuals.htm#Шунгаров'>Шунгаров</a>, <a href='toc_individuals.htm#Шуанова'>Шуанова</a>, <a href='toc_individuals.htm#Шуанов'>Шуанов</a>, <a href='toc_individuals.htm#Шегенбаева'>Шегенбаева</a>, <a href='toc_individuals.htm#Шаханова'>Шаханова</a>, <a href='toc_individuals.htm#Шаутаев'>Шаутаев</a>, <a href='toc_individuals.htm#Шаваева'>Шаваева</a>, <a href='toc_individuals.htm#Шабатуков'>Шабатуков</a>, <a href='toc_individuals.htm#Чофанова'>Чофанова</a>, <a href='toc_individuals.htm#Чотаев'>Чотаев</a>, <a href='toc_individuals.htm#Чомартова'>Чомартова</a>, <a href='toc_individuals.htm#Чипчикова'>Чипчикова</a>, <a href='toc_individuals.htm#Черкесов'>Черкесов</a>, <a href='toc_individuals.htm#Чаниев'>Чаниев</a>, <a href='toc_individuals.htm#Чанаева'>Чанаева</a>, <a href='toc_individuals.htm#Чабдарова'>Чабдарова</a>, <a href='toc_individuals.htm#Цофаева'>Цофаева</a>, <a href='toc_individuals.htm#Цораева'>Цораева</a>, <a href='toc_individuals.htm#Циканов'>Циканов</a>, <a href='toc_individuals.htm#Хучинаева'>Хучинаева</a>, <a href='toc_individuals.htm#Хуболова'>Хуболова</a>, <a href='toc_individuals.htm#Хубиева'>Хубиева</a>, <a href='toc_individuals.htm#Хочуев'>Хочуев</a>, <a href='toc_individuals.htm#Холамханова'>Холамханова</a>, <a href='toc_individuals.htm#Хозаева'>Хозаева</a>, <a href='toc_individuals.htm#Хозаев'>Хозаев</a>, <a href='toc_individuals.htm#Хибиев'>Хибиев</a>, <a href='toc_individuals.htm#Хван'>Хван</a>, <a href='toc_individuals.htm#Хачирова'>Хачирова</a>, <a href='toc_individuals.htm#Хасанов'>Хасанов</a>, <a href='toc_individuals.htm#Хаиров'>Хаиров</a>, <a href='toc_individuals.htm#Хаджиева'>Хаджиева</a>, <a href='toc_individuals.htm#Уянова'>Уянова</a>, <a href='toc_individuals.htm#Уянов'>Уянов</a>, <a href='toc_individuals.htm#Уртенова'>Уртенова</a>, <a href='toc_individuals.htm#Улакова'>Улакова</a>, <a href='toc_individuals.htm#Узденов'>Узденов</a>, <a href='toc_individuals.htm#Уазыкова'>Уазыкова</a>, <a href='toc_individuals.htm#Туменов'>Туменов</a>, <a href='toc_individuals.htm#Тулегенова'>Тулегенова</a>, <a href='toc_individuals.htm#Тулебаева'>Тулебаева</a>, <a href='toc_individuals.htm#Тулебаев'>Тулебаев</a>, <a href='toc_individuals.htm#Точаева'>Точаева</a>, <a href='toc_individuals.htm#Токумаева'>Токумаева</a>, <a href='toc_individuals.htm#Токов'>Токов</a>, <a href='toc_individuals.htm#Тикаева'>Тикаева</a>, <a href='toc_individuals.htm#Тетуева'>Тетуева</a>, <a href='toc_individuals.htm#Теппева'>Теппева</a>, <a href='toc_individuals.htm#Темуку'>Темуку</a>, <a href='toc_individuals.htm#Тебердиев'>Тебердиев</a>, <a href='toc_individuals.htm#Таушинаева'>Таушинаева</a>, <a href='toc_individuals.htm#Таумурзаев'>Таумурзаев</a>, <a href='toc_individuals.htm#Таук-Кумукова'>Таук-Кумукова</a>, <a href='toc_individuals.htm#Тарчоков'>Тарчоков</a>, <a href='toc_individuals.htm#Тамбиев'>Тамбиев</a>, <a href='toc_individuals.htm#Суйдимова'>Суйдимова</a>, <a href='toc_individuals.htm#Сокурова'>Сокурова</a>, <a href='toc_individuals.htm#Сауберов'>Сауберов</a>, <a href='toc_individuals.htm#Сатыбалдиева'>Сатыбалдиева</a>, <a href='toc_individuals.htm#Сарсенбаев'>Сарсенбаев</a>, <a href='toc_individuals.htm#Саракуев'>Саракуев</a>, <a href='toc_individuals.htm#Салпагарова'>Салпагарова</a>, <a href='toc_individuals.htm#Сабитова'>Сабитова</a>, <a href='toc_individuals.htm#Сабанчиева'>Сабанчиева</a>, <a href='toc_individuals.htm#Сабанчиев'>Сабанчиев</a>, <a href='toc_individuals.htm#Рапыкъ'>Рапыкъ</a>, <a href='toc_individuals.htm#Пшуков'>Пшуков</a>, <a href='toc_individuals.htm#Попандопуло'>Попандопуло</a>, <a href='toc_individuals.htm#Папашев'>Папашев</a>, <a href='toc_individuals.htm#Отанова'>Отанова</a>, <a href='toc_individuals.htm#Оразаева'>Оразаева</a>, <a href='toc_individuals.htm#Ольмезова'>Ольмезова</a>, <a href='toc_individuals.htm#Ольмезов'>Ольмезов</a>, <a href='toc_individuals.htm#Нурланов'>Нурланов</a>, <a href='toc_individuals.htm#Наумова'>Наумова</a>, <a href='toc_individuals.htm#Наумов'>Наумов</a>, <a href='toc_individuals.htm#Наршаова'>Наршаова</a>, <a href='toc_individuals.htm#Нартшаова'>Нартшаова</a>, <a href='toc_individuals.htm#Мусуков'>Мусуков</a>, <a href='toc_individuals.htm#Мурачаева'>Мурачаева</a>, <a href='toc_individuals.htm#Муратбек къызы'>Муратбек къызы</a>, <a href='toc_individuals.htm#Мисаков'>Мисаков</a>, <a href='toc_individuals.htm#Мирзоева'>Мирзоева</a>, <a href='toc_individuals.htm#Милюкаев'>Милюкаев</a>, <a href='toc_individuals.htm#Мечукаев'>Мечукаев</a>, <a href='toc_individuals.htm#Метов'>Метов</a>, <a href='toc_individuals.htm#Мелюхаева'>Мелюхаева</a>, <a href='toc_individuals.htm#Машуков'>Машуков</a>, <a href='toc_individuals.htm#Махиев'>Махиев</a>, <a href='toc_individuals.htm#Мамышев'>Мамышев</a>, <a href='toc_individuals.htm#Мамучиева'>Мамучиева</a>, <a href='toc_individuals.htm#Малкандуева'>Малкандуева</a>, <a href='toc_individuals.htm#Макъсат къызы'>Макъсат къызы</a>, <a href='toc_individuals.htm#Лепшокова'>Лепшокова</a>, <a href='toc_individuals.htm#Лелюкаев'>Лелюкаев</a>, <a href='toc_individuals.htm#Къурманова'>Къурманова</a>, <a href='toc_individuals.htm#Къайрылбаева'>Къайрылбаева</a>, <a href='toc_individuals.htm#Курданова'>Курданова</a>, <a href='toc_individuals.htm#Кумыкова'>Кумыкова</a>, <a href='toc_individuals.htm#Кульчицкая'>Кульчицкая</a>, <a href='toc_individuals.htm#Кулиева'>Кулиева</a>, <a href='toc_individuals.htm#Куйгенова'>Куйгенова</a>, <a href='toc_individuals.htm#Куйгенов'>Куйгенов</a>, <a href='toc_individuals.htm#Кужонов'>Кужонов</a>, <a href='toc_individuals.htm#Кудаева'>Кудаева</a>, <a href='toc_individuals.htm#Кубадиева'>Кубадиева</a>, <a href='toc_individuals.htm#Ксанаева'>Ксанаева</a>, <a href='toc_individuals.htm#Ксанаев'>Ксанаев</a>, <a href='toc_individuals.htm#Крымшамхалов'>Крымшамхалов</a>, <a href='toc_individuals.htm#Косаков'>Косаков</a>, <a href='toc_individuals.htm#Князева'>Князева</a>, <a href='toc_individuals.htm#Князев'>Князев</a>, <a href='toc_individuals.htm#Кедрова'>Кедрова</a>, <a href='toc_individuals.htm#Кашежева'>Кашежева</a>, <a href='toc_individuals.htm#Картлыкова'>Картлыкова</a>, <a href='toc_individuals.htm#Карданова'>Карданова</a>, <a href='toc_individuals.htm#Карамизова'>Карамизова</a>, <a href='toc_individuals.htm#Карамизов'>Карамизов</a>, <a href='toc_individuals.htm#Карабашев'>Карабашев</a>, <a href='toc_individuals.htm#Каппушева'>Каппушева</a>, <a href='toc_individuals.htm#Каппушев'>Каппушев</a>, <a href='toc_individuals.htm#Канаматов'>Канаматов</a>, <a href='toc_individuals.htm#Какиева'>Какиева</a>, <a href='toc_individuals.htm#Кайшев'>Кайшев</a>, <a href='toc_individuals.htm#Казаков'>Казаков</a>, <a href='toc_individuals.htm#Кадыров'>Кадыров</a>, <a href='toc_individuals.htm#Исаева'>Исаева</a>, <a href='toc_individuals.htm#Иллистинова'>Иллистинова</a>, <a href='toc_individuals.htm#Иллистинов'>Иллистинов</a>, <a href='toc_individuals.htm#Зарашева'>Зарашева</a>, <a href='toc_individuals.htm#Занкишиев'>Занкишиев</a>, <a href='toc_individuals.htm#Занибеков'>Занибеков</a>, <a href='toc_individuals.htm#Залиханов'>Залиханов</a>, <a href='toc_individuals.htm#Женисбекова'>Женисбекова</a>, <a href='toc_individuals.htm#Жашуева'>Жашуева</a>, <a href='toc_individuals.htm#Жантуев'>Жантуев</a>, <a href='toc_individuals.htm#Жансуев'>Жансуев</a>, <a href='toc_individuals.htm#Жайлыбек къызы'>Жайлыбек къызы</a>, <a href='toc_individuals.htm#Жайлыбек'>Жайлыбек</a>, <a href='toc_individuals.htm#Жазаева'>Жазаева</a>, <a href='toc_individuals.htm#Евтушенко'>Евтушенко</a>, <a href='toc_individuals.htm#Дугоева'>Дугоева</a>, <a href='toc_individuals.htm#Додуева'>Додуева</a>, <a href='toc_individuals.htm#Джолаев'>Джолаев</a>, <a href='toc_individuals.htm#Джатдоев'>Джатдоев</a>, <a href='toc_individuals.htm#Джансуев'>Джансуев</a>, <a href='toc_individuals.htm#Джанкёзова'>Джанкёзова</a>, <a href='toc_individuals.htm#Джамбаев'>Джамбаев</a>, <a href='toc_individuals.htm#Дадуева'>Дадуева</a>, <a href='toc_individuals.htm#Гуляев'>Гуляев</a>, <a href='toc_individuals.htm#Гулиев'>Гулиев</a>, <a href='toc_individuals.htm#Гузоева'>Гузоева</a>, <a href='toc_individuals.htm#Гергокаева'>Гергокаева</a>, <a href='toc_individuals.htm#Геляхов'>Геляхов</a>, <a href='toc_individuals.htm#Гелястанова'>Гелястанова</a>, <a href='toc_individuals.htm#Гелястанов'>Гелястанов</a>, <a href='toc_individuals.htm#Геккиева'>Геккиева</a>, <a href='toc_individuals.htm#Васильев'>Васильев</a>, <a href='toc_individuals.htm#Василенко'>Василенко</a>, <a href='toc_individuals.htm#Боттаев'>Боттаев</a>, <a href='toc_individuals.htm#Болатов'>Болатов</a>, <a href='toc_individuals.htm#Бийногерова'>Бийногерова</a>, <a href='toc_individuals.htm#Биджиева'>Биджиева</a>, <a href='toc_individuals.htm#Бердиева'>Бердиева</a>, <a href='toc_individuals.htm#Бегиев'>Бегиев</a>, <a href='toc_individuals.htm#Баярисова'>Баярисова</a>, <a href='toc_individuals.htm#Бауаева'>Бауаева</a>, <a href='toc_individuals.htm#Батчаев'>Батчаев</a>, <a href='toc_individuals.htm#Барон'>Барон</a>, <a href='toc_individuals.htm#Барасбиев'>Барасбиев</a>, <a href='toc_individuals.htm#Баппинаева'>Баппинаева</a>, <a href='toc_individuals.htm#Балаева'>Балаева</a>, <a href='toc_individuals.htm#Байчекуев'>Байчекуев</a>, <a href='toc_individuals.htm#Байсултанова'>Байсултанова</a>, <a href='toc_individuals.htm#Байсиева'>Байсиева</a>, <a href='toc_individuals.htm#Байрамукова'>Байрамукова</a>, <a href='toc_individuals.htm#Баймырзаев'>Баймырзаев</a>, <a href='toc_individuals.htm#Байкулова'>Байкулова</a>, <a href='toc_individuals.htm#Байказиева'>Байказиева</a>, <a href='toc_individuals.htm#Ахтаова'>Ахтаова</a>, <a href='toc_individuals.htm#Атеева'>Атеева</a>, <a href='toc_individuals.htm#Атамкулова'>Атамкулова</a>, <a href='toc_individuals.htm#Атаева'>Атаева</a>, <a href='toc_individuals.htm#Атабаева'>Атабаева</a>, <a href='toc_individuals.htm#Асланова'>Асланова</a>, <a href='toc_individuals.htm#Асланов'>Асланов</a>, <a href='toc_individuals.htm#Апшаева'>Апшаева</a>, <a href='toc_individuals.htm#Апсев'>Апсев</a>, <a href='toc_individuals.htm#Аппоев'>Аппоев</a>, <a href='toc_individuals.htm#Аппаева'>Аппаева</a>, <a href='toc_individuals.htm#Апажева'>Апажева</a>, <a href='toc_individuals.htm#Анахаева'>Анахаева</a>, <a href='toc_individuals.htm#Алтыбаев'>Алтыбаев</a>, <a href='toc_individuals.htm#Алтуев'>Алтуев</a>, <a href='toc_individuals.htm#Аликберова'>Аликберова</a>, <a href='toc_individuals.htm#Алиева'>Алиева</a>, <a href='toc_individuals.htm#Алботова'>Алботова</a>, <a href='toc_individuals.htm#Акъбаева'>Акъбаева</a>, <a href='toc_individuals.htm#Аккулова'>Аккулова</a>, <a href='toc_individuals.htm#Аккаева'>Аккаева</a>, <a href='toc_individuals.htm#Айтекова'>Айтекова</a>, <a href='toc_individuals.htm#Айбазова'>Айбазова</a>, <a href='toc_individuals.htm#Ажоев'>Ажоев</a>, <a href='toc_individuals.htm#Абитова'>Абитова</a>.<br /><br />Copyright © 1998-2011 GenoPro Inc. All rights reserved. Download GenoPro from <a href='http://www.genopro.com/'>http://www.genopro.com/</a>
+         </p>
+      </body>
+    </noframes>
+</frameset>
+</html>

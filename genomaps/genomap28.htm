@@ -1,0 +1,2179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta name="robots" content="noindex, nofollow"/>
+<title></title>
+<meta http-equiv="Content-Language" content="en"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../style.css" type="text/css"/>
+<script type='text/javascript' language="JavaScript" src="../scripts/jquery.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/hammer.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/svg-pan-zoom.min.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/script.js"></script>
+<script type='text/javascript' language="JavaScript" src="../scripts/svg.js"></script>
+<script type='text/javascript' language="JavaScript">
+//<![CDATA[
+        $(function () {
+			$(window).resize(doResize);
+		});
+        showPopUpFrame();
+		// the only postMessage we get is one to reload popup,htm. current dir is genomaps so need to look in parent dir.
+		$.receiveMessage(function(e){
+			window.location.assign('../'+e.data);
+		});
+//]]>      
+</script>
+
+</head>
+<body class="gno-popup" style="overflow:hidden;">
+<div class="floatright" style="display: inline;">
+	<img src="../images/maximize.gif" class="control24" name="togglePopUp" id="togglePopUp" onclick="javascript:togglePopUpFrame(this.name, '../');" title="Click to enlarge/reduce the GenoMap image" alt="Click to enlarge/reduce the GenoMap image"/>
+	<img src="../images/close.gif" class="control24" onclick="hideGenoMapFrame(event);" title="Hide this GenoMap frame" alt="Hide this GenoMap frame"/>
+</div>
+<h4 style="margin:5px;"><img src="../images/svg.gif" alt=""/> Family Subtree Diagram : 13. Жангуразовы</h4>
+
+<svg id="svgCanvas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	font-family="Arial"
+	width="100%"
+	height="87%"
+	zoomAndPan="disable"
+	onload="svgInit({File:'genomap28.svg', Bounds:[-2005,-281,1141,541],ZoomExtent:false,ExpandFrame:false});"
+	preserveAspectRatio="xMidYMid meet"  xml:space="preserve" 
+	style="background-color:white;fill:none;stroke: black;stroke-width:3px;font-weight:normal;font-size:10px;text-anchor:middle;stroke-linecap:round;stroke-linejoin:round;">
+<!--	<title>Family Subtree Diagram : 13. &#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;&#1099;</title> -->
+        <defs>
+<g id='readme' display='none'><text>
+PLEASE NOTE: If you do not see a GRAPHIC IMAGE of a family tree here but are seeing this text
+instead then it is most probably because the web server is not correctly configured to serve svg
+pages correctly. 
+
+see http://developer.mozilla.org/en/docs/SVG:Server_Configuration for information on how to
+correctly configure a web server for svg files.
+<!-- This comment serves as marker text added post version 2011.06.08 to force SVG/PDF generation once only 
+     to overcome missing picture bug-->
+</text></g>
+          <marker id="startarrowblack" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="0" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke-width:1px;">
+                    <line x1="3" y1="0" x2="0" y2="3"/> 
+                    <line x1="3" y1="6" x2="0" y2="3"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowblack" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowblue" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke:blue; stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="endarrowred" markerWidth="6" markerHeight="6" viewBox="0 0 3 6" orient="auto" refX="3" refY="3" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:1px;">
+                    <line x2="3" y2="3" x1="0" y1="0"/> 
+                    <line x2="3" y2="3" x1="0" y1="6"/> 
+		</g>
+          </marker> 
+          <marker id="bar" viewBox="0 0 12 22" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="11" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:3px;">
+                    <line x1="1" y1="1" x2="1" y2="20"/> 
+                    <line x1="10" y1="0" x2="10" y2="20"/> 
+		</g>
+          </marker> 
+          <marker id="barcircle" viewBox="0 0 14 24" markerWidth="7" markerHeight="7" orient="auto" refX="7" refY="12" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:3px;">
+                    <line x1="1" y1="1" x2="1" y2="20"/> 
+                    <line x1="15" y1="0" x2="15" y2="20"/> 
+                    <circle cx="7.5" cy="10" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="circlegreen"  viewBox="1 1 12 12" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:2px; fill:white;">
+                    <circle cx="6" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="circleblack"  viewBox="1 1 12 12" markerWidth="6" markerHeight="6" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px; fill:white;">
+                    <circle cx="6" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="linkgreen"  viewBox="0 0 18 12" markerWidth="9" markerHeight="9" orient="auto" refX="6" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:green; stroke-width:2px; fill:none;">
+                    <circle cx="6" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="12" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="6" cy="6" r="5"/> 
+                    <circle cx="12" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="linkblack"  viewBox="0 0 18 12" markerWidth="9" markerHeight="9" orient="auto" refX="9" refY="6" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px; fill:none;">
+                    <circle cx="6" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="12" cy="6" r="5" style="stroke:none;fill:white;"/> 
+                    <circle cx="6" cy="6" r="5"/> 
+                    <circle cx="12" cy="6" r="5"/> 
+		</g>
+          </marker> 
+          <marker id="cross"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5"> 
+		<g style="stroke:red; stroke-width:2px;">
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		</g>
+          </marker> 
+          <marker id="crossboxred"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:red; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="crossboxblack"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <line x1="0" y1="0" x2="10" y2="10"/> 
+                    <line x1="10" y1="0" x2="0" y2="10"/> 
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="box"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+                    <rect x1="0" y1="0" width="10" height="10" style="fill:white;stroke:none;"/> 
+                    <text x="5" y="8" style="fill:black;stroke:none;font-size:8px;">?</text>
+		    <polyline points="0,0,10,0,10,10,0,10,0,0"/>
+		</g>
+          </marker> 
+          <marker id="diamondred"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" orient="auto" refX="5" refY="5"> 
+		<g style="stroke:red; stroke-width:2px; fill:white;">
+                    <path d="M0,5 L5,10 L10,5 L5,0 L0,5"/> 
+		</g>
+          </marker> 
+         <marker id="query"  viewBox="0 0 10 10" markerWidth="6" markerHeight="6" refX="5" refY="5" markerUnits="strokeWidth"> 
+		<g style="stroke:black; stroke-width:2px;">
+		</g>
+          </marker> 
+	  <g id='slash'>
+		<path d='m5, -5 l-10,10'/>
+	  </g>
+	  <g id='backslash'>
+		<path d='m-5,-5 l10,10'/>
+	  </g>
+	  <g id='crossed'>
+		<path d='m-5,-5 l10,10 m0,-10 l-10,10'/>
+	  </g>
+	  <g id='square'>
+	  <path d='m0,0 l-9,0 l0,-9 l9,0 l0,9 z'/>
+	  </g>
+	  <g id='triangle'>
+	  <path d='m0,0 l-9,0 l9,-9 l0,9 z'/>
+	  </g>
+	  <g id='segment'>
+	  <path d='m0,0 l-9,0 a 9,9 0 0,1 9,-9 l0,9 z'/>
+	  </g>
+	  <g id='rect'>
+	  <path d='m0,0 l-15,0 l0,-15 l15,0 l0,15 z'/>
+	  </g>
+	  <g id='houseM'>
+	  <path d='m-6,6 l0,-8 l6,-4 l6,4 l0,8 l-12,0 z'/>
+	  </g>
+	  <g id='houseX'>
+	  <path d='m-9,9 l0,-12 l9,-6 l9,6 l0,12 l-18,0 z'/>
+	  </g>
+	  <g id='houseL'>
+	  <path d='m-7.5,7.5 l0,-10 l7.5,-5 l7.5,5 l0,10 l-15,0 z'/>
+	  </g>
+	  <g id='houseS'>
+	  <path d='m-5.5,5.5 l0,-7 l6,-3.75 l5.5,3.75 l0,7 l-11,0 z'/>
+	  </g>
+	  <g id='houseT'>
+	  <path d='m-5,5 l0,-6.5 l5,-3.75 l5,3.75 l0,6.5 l-10,0 z'/>
+	  </g>
+		<path id="dir_arrow" style="stroke: lightgrey;fill:url(#rad1);stroke-width:1px;" d="m8,0 l-8,-8 l-8 8 h4 v8 h8 v-8 z"/>
+		<g id="arrowN" viewBox="-40,-40,40,40">
+			<use xlink:href="#dir_arrow"/>
+		</g>
+		<g id="arrowE">
+			<use xlink:href="#dir_arrow" transform="rotate(90)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowS">
+			<use xlink:href="#dir_arrow" transform="rotate(180)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowW">
+			<use xlink:href="#dir_arrow" transform="rotate(270)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowNE">
+			<use xlink:href="#dir_arrow" transform="rotate(45)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowSE">
+			<use xlink:href="#dir_arrow" transform="rotate(135)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowSW">
+			<use xlink:href="#dir_arrow" transform="rotate(225)" viewBox="-40,-40,40,40"/>
+		</g>
+		<g id="arrowNW">
+			<use xlink:href="#dir_arrow" transform="rotate(-45)" viewBox="-40,-40,40,40"/>
+		</g>
+		<radialGradient id = "rad1" cx = "50%" cy = "50%" r = "50%" fx="30%" fy="30%">
+			<stop stop-color = "limegreen" offset = "20%"/>
+			<stop stop-color = "greenyellow" offset = "100%"/>
+		</radialGradient>	
+<clipPath id="clip1"><path id="path1" d="M4 4 L0 -6 -4 4 z"/></clipPath>
+<clipPath id="clip2"><path id="path2" d="M6 6 L0 -9 -6 6 z"/></clipPath>
+<clipPath id="clip3"><path id="path3" d="M9 9 L0 -13,5 -9 9 z"/></clipPath>
+<clipPath id="clip4"><path id="path4" d="M12 12 L0 -18 -12 12 z"/></clipPath>
+<clipPath id="clip5"><path id="path5" d="M16 16 L0 -24 -16 16 z"/></clipPath>
+<clipPath id="clip6"><path id="path6" d="M24 24 L0 -36 -24 24 z"/></clipPath>
+<clipPath id="clip7"><path id="path7" d="M36 36 L0 -54 -36 36 z"/></clipPath>
+<clipPath id="clip8"><path id="path8" d="M72 72 L0 -108 -72 72 z"/></clipPath>
+
+	</defs>
+	<g id="viewport" style="pointer-events: visible;"> <!-- 2017.07.01 pointer-events: visble so that tooltips (<title>) are displayed over shapes with fill:none; -->
+	   <rect x="0" y="0" width="3146" height="822" style="fill:white; opacity:0"/>
+<g><title>Parent</title>
+<path d="M1955 81  L1955 26" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2135 81  L2135 26" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M325 81  L325 131" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M405 81  L405 131" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1665 81  L1665 131" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2835 81  L2835 131" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3055 81  L3055 131" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2835 186  L2835 131" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2905 186  L2905 131" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2815 186  L2815 236" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2945 186  L2945 236" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2945 291  L2945 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3010 291  L3010 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2975 291  L2975 341" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2975 396  L2975 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3040 396  L3040 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3020 396  L3020 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3020 501  L3020 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M3120 501  L3120 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3035 501  L3035 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3105 501  L3105 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1665 186  L1665 131" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1750 186  L1750 131" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1030 186  L1030 236" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1825 186  L1825 236" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1030 291  L1030 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1095 291  L1095 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M825 291  L825 341" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1130 291  L1130 341" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M825 396  L825 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1005 396  L1005 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M405 396  L405 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M900 396  L900 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M405 501  L405 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M470 501  L470 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M435 501  L435 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M900 501  L900 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M970 501  L970 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M925 501  L925 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M435 606  L435 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M515 606  L515 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M40 606  L40 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M490 606  L490 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M770 606  L770 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M40 711  L40 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M220 711  L220 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M65 711  L65 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M130 711  L130 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M200 711  L200 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M490 711  L490 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M670 711  L670 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M280 711  L280 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M340 711  L340 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M405 711  L405 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M465 711  L465 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M530 711  L530 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M595 711  L595 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M665 711  L665 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M735 711  L735 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M925 606  L925 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M995 606  L995 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M950 606  L950 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M950 711  L950 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1015 711  L1015 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M940 711  L940 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1025 711  L1025 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1130 396  L1130 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1195 396  L1195 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1090 396  L1090 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1190 396  L1190 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1190 501  L1190 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1240 501  L1240 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1165 501  L1165 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1255 501  L1255 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1825 291  L1825 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1890 291  L1890 236" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1850 291  L1850 341" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1850 396  L1850 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2030 396  L2030 341" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1710 396  L1710 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2625 396  L2625 446" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1710 501  L1710 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1795 501  L1795 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1735 501  L1735 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2625 501  L2625 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2695 501  L2695 446" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2540 501  L2540 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2850 501  L2850 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2930 501  L2930 551" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2540 606  L2540 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2615 606  L2615 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2525 606  L2525 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2750 606  L2750 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2525 711  L2525 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2575 711  L2575 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2425 711  L2425 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2490 711  L2490 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2555 711  L2555 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2620 711  L2620 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2750 711  L2750 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2810 711  L2810 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2695 711  L2695 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2760 711  L2760 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2830 711  L2830 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2900 711  L2900 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2970 711  L2970 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M3040 711  L3040 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1735 606  L1735 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1805 606  L1805 551" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1350 606  L1350 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1720 606  L1720 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2085 606  L2085 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2325 606  L2325 656" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1350 711  L1350 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1400 711  L1400 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1265 711  L1265 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1340 711  L1340 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1420 711  L1420 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1500 711  L1500 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1720 711  L1720 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M1780 711  L1780 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1590 711  L1590 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1665 711  L1665 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1745 711  L1745 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1820 711  L1820 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1895 711  L1895 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2325 711  L2325 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2390 711  L2390 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2350 711  L2350 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2085 711  L2085 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Parent</title>
+<path d="M2140 711  L2140 656" style="fill:none;stroke: black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M1970 711  L1970 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2045 711  L2045 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2120 711  L2120 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2195 711  L2195 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<g><title>Biological Child</title>
+<path d="M2270 711  L2270 761" style="fill:none;stroke:black;stroke-width:3px;"/>
+</g>
+<a xlink:href='../' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(five children)'><title>&#32;(five children)</title>
+<line x1="325" y1="81" x2="3055" y2="81" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01692.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="2815" y1="186" x2="2945" y2="186" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01693.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="2945" y1="291" x2="3010" y2="291" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01694.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="2975" y1="396" x2="3040" y2="396" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01695.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="3020" y1="501" x2="3120" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01696.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="1030" y1="186" x2="1825" y2="186" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01697.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="825" y1="291" x2="1130" y2="291" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01698.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="405" y1="396" x2="1005" y2="396" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01699.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="405" y1="501" x2="470" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01700.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="900" y1="501" x2="970" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01701.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(three children)'><title>&#32;(three children)</title>
+<line x1="40" y1="606" x2="770" y2="606" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01702.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(three children)'><title>&#32;(three children)</title>
+<line x1="40" y1="711" x2="220" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01703.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(eight children)'><title>&#32;(eight children)</title>
+<line x1="280" y1="711" x2="735" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01704.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="925" y1="606" x2="995" y2="606" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01705.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="940" y1="711" x2="1025" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01706.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="1090" y1="396" x2="1195" y2="396" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01707.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="1165" y1="501" x2="1255" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01708.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="1825" y1="291" x2="1890" y2="291" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01709.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="1710" y1="396" x2="2625" y2="396" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01710.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="1710" y1="501" x2="1795" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01711.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(three children)'><title>&#32;(three children)</title>
+<line x1="2540" y1="501" x2="2930" y2="501" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01712.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(two children)'><title>&#32;(two children)</title>
+<line x1="2525" y1="606" x2="2750" y2="606" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01713.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(four children)'><title>&#32;(four children)</title>
+<line x1="2425" y1="711" x2="2620" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01714.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(six children)'><title>&#32;(six children)</title>
+<line x1="2695" y1="711" x2="3040" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01738.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(four children)'><title>&#32;(four children)</title>
+<line x1="1350" y1="606" x2="2325" y2="606" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01739.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(four children)'><title>&#32;(four children)</title>
+<line x1="1265" y1="711" x2="1500" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01740.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(five children)'><title>&#32;(five children)</title>
+<line x1="1590" y1="711" x2="1895" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01741.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(a child)'><title>&#32;(a child)</title>
+<line x1="2325" y1="711" x2="2390" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<a xlink:href='../family-andPartner-fam01742.htm' onclick='restorePopUpFrame(null,"../");' target='detail' title='&#32;(five children)'><title>&#32;(five children)</title>
+<line x1="1970" y1="711" x2="2270" y2="711" style=" cursor:pointer;fill:none;stroke: gray;stroke-width:3px;"/>
+</a>
+<g>
+<rect x="1946" y="17" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1946" y="17" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+<g>
+<circle cx="2135" cy="26" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2135" cy="26" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05689.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="292" y="143" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="325" y="141">
+<tspan x="326.666666666667" y="155" style="stroke:none;fill: black;text-anchor:middle;">&#1057;&#1080;&#1073;&#1080;&#1083;&#1094;&#1080;</tspan>
+<tspan x="326.666666666667" y="169" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="316" y="122" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="316" y="122" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05690.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="372" y="143" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="405" y="141">
+<tspan x="406.666666666667" y="155" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1094;&#1077;&#1081;</tspan>
+<tspan x="406.666666666667" y="169" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="396" y="122" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="396" y="122" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05691.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1632" y="143" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1665" y="141">
+<tspan x="1666.66666666667" y="155" style="stroke:none;fill: black;text-anchor:middle;">&#1043;&#1086;&#1083;&#1083;&#1091;</tspan>
+<tspan x="1666.66666666667" y="169" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1656" y="122" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1656" y="122" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05692.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2802" y="143" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2835" y="141">
+<tspan x="2836.66666666667" y="155" style="stroke:none;fill: black;text-anchor:middle;">&#1057;&#1086;&#1089;&#1090;&#1072;&#1088;</tspan>
+<tspan x="2836.66666666667" y="169" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2826" y="122" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2826" y="122" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05693.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3022" y="143" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3055" y="141">
+<tspan x="3056.66666666667" y="155" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1083;&#1072;&#1085;</tspan>
+<tspan x="3056.66666666667" y="169" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="3046" y="122" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3046" y="122" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2905" cy="131" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2905" cy="131" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05695.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2782" y="248" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2815" y="246">
+<tspan x="2816.66666666667" y="260" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1082;&#1082;&#1072;</tspan>
+<tspan x="2816.66666666667" y="274" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2806" y="227" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2806" y="227" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05696.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2912" y="248" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2945" y="246">
+<tspan x="2946.66666666667" y="260" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1086;&#1094;&#1072;&#1081;</tspan>
+<tspan x="2946.66666666667" y="274" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2936" y="227" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2936" y="227" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="3010" cy="236" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3010" cy="236" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05698.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2942" y="353" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2975" y="351">
+<tspan x="2976.66666666667" y="365" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1072;&#1096;&#1072;&#1088;&#1073;&#1077;&#1082;</tspan>
+<tspan x="2976.66666666667" y="379" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2966" y="332" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2966" y="332" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="3040" cy="341" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3040" cy="341" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05700.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2987" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3020" y="456">
+<tspan x="3021.66666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1064;&#1072;&#1091;&#1090;&#1072;</tspan>
+<tspan x="3021.66666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="3011" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3011" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="3120" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="3120" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05702.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3002" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3035" y="561">
+<tspan x="3036.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1054;&#1088;&#1090;&#1072;&#1073;&#1072;&#1081;</tspan>
+<tspan x="3036.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="3026" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3026" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05703.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3072" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3105" y="561">
+<tspan x="3106.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1077;&#1082;</tspan>
+<tspan x="3106.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="3096" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3096" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1750" cy="131" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1750" cy="131" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05705.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="997" y="248" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1030" y="246">
+<tspan x="1031.66666666667" y="260" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1077;&#1084;&#1080;&#1088;&#1082;&#1072;&#1085;</tspan>
+<tspan x="1031.66666666667" y="274" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1021" y="227" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1021" y="227" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05706.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1792" y="248" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1825" y="246">
+<tspan x="1826.66666666667" y="260" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1091;&#1089;&#1072;&#1081;</tspan>
+<tspan x="1826.66666666667" y="274" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1816" y="227" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1816" y="227" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1095" cy="236" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1095" cy="236" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05708.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="792" y="353" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="825" y="351">
+<tspan x="826.666666666667" y="365" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1077;&#1082;&#1073;&#1086;&#1083;&#1072;&#1090;</tspan>
+<tspan x="826.666666666667" y="379" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="816" y="332" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="816" y="332" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05709.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1097" y="353" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1130" y="351">
+<tspan x="1131.66666666667" y="365" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1072;&#1091;&#1094;&#1091;</tspan>
+<tspan x="1131.66666666667" y="379" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1121" y="332" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1121" y="332" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1005" cy="341" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1005" cy="341" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05711.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="372" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="405" y="456">
+<tspan x="406.666666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1072;&#1085;&#1073;&#1086;&#1083;&#1072;&#1090;</tspan>
+<tspan x="406.666666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="396" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="396" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05712.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="867" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="900" y="456">
+<tspan x="901.666666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1094;&#1072;&#1081;</tspan>
+<tspan x="901.666666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="891" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="891" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="470" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="470" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05714.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="402" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="435" y="561">
+<tspan x="436.666666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1077;&#1084;&#1080;&#1088;&#1073;&#1086;&#1083;&#1072;&#1090;</tspan>
+<tspan x="436.666666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="426" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="426" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="970" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="970" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05716.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="892" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="925" y="561">
+<tspan x="926.666666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1054;&#1089;&#1089;&#1072;</tspan>
+<tspan x="926.666666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="916" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="916" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="515" cy="551" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="515" cy="551" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05718.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="7" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="40" y="666">
+<tspan x="41.6666666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1072;&#1081;&#1088;&#1077;&#1084;&#1091;&#1082;</tspan>
+<tspan x="41.6666666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="31" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="31" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05719.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="457" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="490" y="666">
+<tspan x="491.666666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1099;&#1076;&#1077;&#1085;</tspan>
+<tspan x="491.666666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="481" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="481" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05720.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="737" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="770" y="666">
+<tspan x="771.666666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1048;&#1079;&#1072;</tspan>
+<tspan x="771.666666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="761" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="761" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="220" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="220" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05722.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="32" y="773" height="42px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="65" y="771">
+<tspan x="66.6666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1091;&#1093;&#1072;&#1084;&#1084;&#1072;&#1090;-</tspan>
+<tspan x="66.6666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1076;&#1078;&#1080;</tspan>
+<tspan x="66.6666666666667" y="813" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="56" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="56" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05723.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="97" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="130" y="771">
+<tspan x="131.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1084;&#1079;&#1072;</tspan>
+<tspan x="131.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="121" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="121" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05724.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="167" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="200" y="771">
+<tspan x="201.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1076;&#1080;&#1083;&#1100;</tspan>
+<tspan x="201.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="191" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="191" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="670" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="670" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05726.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="247" y="773" height="42px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="280" y="771">
+<tspan x="281.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1054;&#1075;&#1091;&#1088;&#1083;&#1091;-</tspan>
+<tspan x="281.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1076;&#1078;&#1080;</tspan>
+<tspan x="281.666666666667" y="813" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="271" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="271" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05727.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="307" y="773" height="42px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="340" y="771">
+<tspan x="341.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1048;&#1089;&#1084;&#1072;&#1080;&#1083;-</tspan>
+<tspan x="341.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1076;&#1078;&#1080;</tspan>
+<tspan x="341.666666666667" y="813" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="331" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="331" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05728.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="372" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="405" y="771">
+<tspan x="406.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1062;&#1091;&#1082;&#1091;&#1083;</tspan>
+<tspan x="406.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="396" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="396" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05729.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="432" y="773" height="42px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="465" y="771">
+<tspan x="466.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1091;&#1089;&#1089;&#1072;-</tspan>
+<tspan x="466.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1076;&#1078;&#1080;</tspan>
+<tspan x="466.666666666667" y="813" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="456" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="456" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05730.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="497" y="773" height="42px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="530" y="771">
+<tspan x="531.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1062;&#1077;&#1092;&#1077;&#1083;&#1083;&#1077;&#1091;-</tspan>
+<tspan x="531.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1076;&#1078;&#1080;</tspan>
+<tspan x="531.666666666667" y="813" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="521" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="521" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05731.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="562" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="595" y="771">
+<tspan x="596.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1057;&#1099;&#1081;&#1083;&#1099;</tspan>
+<tspan x="596.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="586" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="586" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05732.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="632" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="665" y="771">
+<tspan x="666.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1086;&#1083;&#1072;&#1090;</tspan>
+<tspan x="666.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="656" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="656" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05733.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="699" y="773" height="28px" width="72px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="735" y="771">
+<tspan x="736.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1091;&#1088;&#1091;&#1084;</tspan>
+<tspan x="736.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;</tspan>
+</text>
+<g>
+<circle cx="735" cy="761" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="735" cy="761" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<g>
+<circle cx="995" cy="551" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="995" cy="551" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05735.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="917" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="950" y="666">
+<tspan x="951.666666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1089;&#1083;&#1072;&#1085;&#1073;&#1077;&#1082;</tspan>
+<tspan x="951.666666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="941" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="941" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1015" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1015" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05737.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="907" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="940" y="771">
+<tspan x="941.666666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1086;&#1082;&#1091;&#1081;</tspan>
+<tspan x="941.666666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="931" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="931" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05738.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="992" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1025" y="771">
+<tspan x="1026.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1091;&#1087;&#1080;&#1081;</tspan>
+<tspan x="1026.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1016" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1016" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1195" cy="341" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1195" cy="341" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05740.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1057" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1090" y="456">
+<tspan x="1091.66666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1069;&#1083;&#1100;&#1084;&#1099;&#1088;&#1079;&#1072;</tspan>
+<tspan x="1091.66666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1081" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1081" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05741.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1157" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1190" y="456">
+<tspan x="1191.66666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1072;&#1091;&#1083;&#1091;</tspan>
+<tspan x="1191.66666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1181" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1181" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1240" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1240" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05743.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1132" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1165" y="561">
+<tspan x="1166.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1044;&#1086;&#1083;&#1072;&#1081;</tspan>
+<tspan x="1166.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1156" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1156" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05744.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1222" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1255" y="561">
+<tspan x="1256.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1054;&#1088;&#1093;&#1072;&#1085;</tspan>
+<tspan x="1256.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1246" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1246" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1890" cy="236" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1890" cy="236" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05746.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1817" y="353" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1850" y="351">
+<tspan x="1851.66666666667" y="365" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1072;&#1084;&#1075;&#1091;&#1090;</tspan>
+<tspan x="1851.66666666667" y="379" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1841" y="332" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1841" y="332" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2030" cy="341" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2030" cy="341" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05748.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1677" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1710" y="456">
+<tspan x="1711.66666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1072;&#1091;&#1073;&#1080;&#1081;</tspan>
+<tspan x="1711.66666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1701" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1701" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05749.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2592" y="458" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2625" y="456">
+<tspan x="2626.66666666667" y="470" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1072;&#1088;&#1072;</tspan>
+<tspan x="2626.66666666667" y="484" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2616" y="437" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2616" y="437" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1795" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1795" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05751.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1702" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1735" y="561">
+<tspan x="1736.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1044;&#1077;&#1073;&#1077;&#1090;</tspan>
+<tspan x="1736.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1726" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1726" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2695" cy="446" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2695" cy="446" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05753.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2507" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2540" y="561">
+<tspan x="2541.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1072;&#1088;&#1083;&#1099;&#1082;</tspan>
+<tspan x="2541.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2531" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2531" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05754.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2817" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2850" y="561">
+<tspan x="2851.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1072;&#1083;&#1102;</tspan>
+<tspan x="2851.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2841" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2841" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05755.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2897" y="563" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2930" y="561">
+<tspan x="2931.66666666667" y="575" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1086;&#1085;&#1072;</tspan>
+<tspan x="2931.66666666667" y="589" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2921" y="542" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2921" y="542" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2615" cy="551" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2615" cy="551" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05757.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2492" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2525" y="666">
+<tspan x="2526.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1091;&#1089;&#1072;</tspan>
+<tspan x="2526.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2516" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2516" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05758.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2717" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2750" y="666">
+<tspan x="2751.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1080;&#1095;&#1080;</tspan>
+<tspan x="2751.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2741" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2741" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2575" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2575" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05760.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2392" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2425" y="771">
+<tspan x="2426.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1072;&#1083;&#1080;&#1084;&#1075;&#1077;&#1088;&#1080;&#1081;</tspan>
+<tspan x="2426.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2416" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2416" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05761.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2457" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2490" y="771">
+<tspan x="2491.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1077;&#1072;&#1089;&#1083;&#1072;&#1085;</tspan>
+<tspan x="2491.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2481" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2481" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05762.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2522" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2555" y="771">
+<tspan x="2556.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1072;&#1076;&#1080;&#1085;</tspan>
+<tspan x="2556.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2546" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2546" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05763.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2587" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2620" y="771">
+<tspan x="2621.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1048;&#1089;&#1083;&#1072;&#1084;</tspan>
+<tspan x="2621.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2611" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2611" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2810" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2810" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05765.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2662" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2695" y="771">
+<tspan x="2696.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1061;&#1072;&#1088;&#1091;&#1085;</tspan>
+<tspan x="2696.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2686" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2686" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05766.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2727" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2760" y="771">
+<tspan x="2761.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1072;&#1090;&#1072;</tspan>
+<tspan x="2761.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2751" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2751" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05767.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2797" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2830" y="771">
+<tspan x="2831.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1062;&#1086;&#1088;&#1072;</tspan>
+<tspan x="2831.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2821" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2821" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05768.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2867" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2900" y="771">
+<tspan x="2901.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1076;&#1080;&#1083;&#1100;</tspan>
+<tspan x="2901.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2891" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2891" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05769.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2937" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2970" y="771">
+<tspan x="2971.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1072;&#1093;&#1090;&#1091;&#1093;</tspan>
+<tspan x="2971.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2961" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2961" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05770.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="3007" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="3040" y="771">
+<tspan x="3041.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1072;&#1074;&#1082;&#1091;&#1096;</tspan>
+<tspan x="3041.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="3031" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="3031" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1805" cy="551" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1805" cy="551" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05835.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1317" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1350" y="666">
+<tspan x="1351.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1073;&#1088;&#1077;&#1082;</tspan>
+<tspan x="1351.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1341" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1341" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05836.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1687" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1720" y="666">
+<tspan x="1721.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1091;&#1088;&#1072;&#1085;</tspan>
+<tspan x="1721.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1711" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1711" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05837.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2052" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2085" y="666">
+<tspan x="2086.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1041;&#1072;&#1096;&#1095;&#1099;</tspan>
+<tspan x="2086.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2076" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2076" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05838.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2292" y="668" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2325" y="666">
+<tspan x="2326.66666666667" y="680" style="stroke:none;fill: black;text-anchor:middle;">&#1058;&#1077;&#1084;&#1080;&#1088;&#1094;&#1086;&#1082;</tspan>
+<tspan x="2326.66666666667" y="694" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2316" y="647" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2316" y="647" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="1400" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1400" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05840.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1232" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1265" y="771">
+<tspan x="1266.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1073;&#1076;&#1091;&#1083;&#1083;&#1072;&#1093;</tspan>
+<tspan x="1266.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1256" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1256" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05841.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1304" y="773" height="28px" width="72px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1340" y="771">
+<tspan x="1341.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1073;&#1080;&#1076;&#1072;&#1090;</tspan>
+<tspan x="1341.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;</tspan>
+</text>
+<g>
+<circle cx="1340" cy="761" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1340" cy="761" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../ind05842.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1387" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1420" y="771">
+<tspan x="1421.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1048;&#1089;&#1084;&#1072;&#1080;&#1083;</tspan>
+<tspan x="1421.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1411" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1411" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05843.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1464" y="773" height="28px" width="72px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1500" y="771">
+<tspan x="1501.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1091;&#1083;&#1077;&#1081;&#1093;&#1072;</tspan>
+<tspan x="1501.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;</tspan>
+</text>
+<g>
+<circle cx="1500" cy="761" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1500" cy="761" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<g>
+<circle cx="1780" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1780" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05845.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1554" y="773" height="28px" width="72px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1590" y="771">
+<tspan x="1591.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1062;&#1080;&#1094;&#1080;&#1085;&#1072;</tspan>
+<tspan x="1591.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;</tspan>
+</text>
+<g>
+<circle cx="1590" cy="761" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="1590" cy="761" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+</a>
+<a xlink:href='../ind05846.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1632" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1665" y="771">
+<tspan x="1666.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1069;&#1091;&#1101;&#1083;&#1100;</tspan>
+<tspan x="1666.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1656" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1656" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05847.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1712" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1745" y="771">
+<tspan x="1746.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1054;&#1084;&#1072;&#1088;</tspan>
+<tspan x="1746.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1736" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1736" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05848.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1787" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1820" y="771">
+<tspan x="1821.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1052;&#1072;&#1093;&#1077;&#1090;</tspan>
+<tspan x="1821.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1811" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1811" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05849.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1862" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1895" y="771">
+<tspan x="1896.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1043;&#1099;&#1078;&#1099;</tspan>
+<tspan x="1896.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1886" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1886" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2390" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2390" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05851.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2317" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2350" y="771">
+<tspan x="2351.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1047;&#1072;&#1096;&#1072;&#1091;</tspan>
+<tspan x="2351.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2341" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2341" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<g>
+<circle cx="2140" cy="656" r="9" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<circle cx="2140" cy="656" r="9" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="pink" begin="mouseover" end="mouseout"/>
+</circle>
+</g>
+<a xlink:href='../ind05853.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="1937" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="1970" y="771">
+<tspan x="1971.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1040;&#1076;&#1099;&#1096;</tspan>
+<tspan x="1971.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="1961" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="1961" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05854.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2012" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2045" y="771">
+<tspan x="2046.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1064;&#1072;&#1091;&#1093;&#1072;&#1083;</tspan>
+<tspan x="2046.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2036" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2036" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05855.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2087" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2120" y="771">
+<tspan x="2121.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1069;&#1083;&#1078;&#1077;&#1088;&#1091;&#1082;&#1086;</tspan>
+<tspan x="2121.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2111" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2111" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05856.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2162" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2195" y="771">
+<tspan x="2196.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1062;&#1080;&#1075;&#1080;&#1088;</tspan>
+<tspan x="2196.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2186" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2186" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+<a xlink:href='../ind05857.htm' onclick='restorePopUpFrame(null,"../");' target='detail'>
+<rect x="2237" y="773" height="28px" width="66px" style="stroke:none;fill:#FFFFFF;"/>
+<text style="font-size:10px;" x="2270" y="771">
+<tspan x="2271.66666666667" y="785" style="stroke:none;fill: black;text-anchor:middle;">&#1050;&#1072;&#1079;&#1080;&#1081;</tspan>
+<tspan x="2271.66666666667" y="799" style="stroke:none;fill: black;text-anchor:middle;">&#1046;&#1072;&#1085;&#1075;&#1091;&#1088;&#1072;&#1079;&#1086;&#1074;</tspan>
+</text>
+<g>
+<rect x="2261" y="752" width="18px" height="18px" style="cursor:pointer;stroke: white;fill:#FFFFFF;stroke-width:3px;"/>
+<rect x="2261" y="752" width="18px" height="18px" style="cursor:pointer;stroke: #000000;fill:none;stroke-width:3px;">
+<set attributeName="fill" attributeType="CSS" to="cyan" begin="mouseover" end="mouseout"/>
+</rect>
+</g>
+</a>
+
+	<circle id="highlight" cx="0" cy="0" r="50" style="stroke-width:3px;fill:none;opacity:0.3;" visibility="hidden" pointer-events="none">
+		<animate attributeName="r" values="10;50" dur="5s" repeatCount="indefinite" />
+		<animate attributeName="stroke" values="fuchsia;fuchsia;white;fuchsia;fuchsia" dur="1s" repeatCount="indefinite" />
+	</circle>
+</g>
+	<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="65"
+   height="112"
+   x="10"
+   y="10"
+   id="controls">
+  <defs
+     id="defs2820">
+    <filter
+       x="-0.25"
+       y="-0.25"
+       width="1.5"
+       height="1.5"
+       color-interpolation-filters="sRGB"
+       id="filter3696">
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="2.000000"
+         in="SourceAlpha"
+         id="feGaussianBlur3698" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix3700" />
+      <feOffset
+         result="offsetBlur"
+         dy="4.000000"
+         dx="4.000000"
+         in="bluralpha"
+         id="feOffset3702" />
+      <feMerge
+         result="fbSourceGraphic"
+         id="feMerge3704">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode3706" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode3708" />
+      </feMerge>
+      <feColorMatrix
+         id="feColorMatrix4144"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="1.000000"
+         in="fbSourceGraphicAlpha"
+         id="feGaussianBlur4146" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix4148" />
+      <feOffset
+         result="offsetBlur"
+         dy="0.100000"
+         dx="0.100000"
+         in="bluralpha"
+         id="feOffset4150" />
+      <feMerge
+         result="fbSourceGraphic"
+         id="feMerge4152">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode4154" />
+        <feMergeNode
+           in="fbSourceGraphic"
+           id="feMergeNode4156" />
+      </feMerge>
+      <feColorMatrix
+         id="feColorMatrix4186"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="4.000000"
+         in="fbSourceGraphicAlpha"
+         id="feGaussianBlur4188" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 "
+         type="matrix"
+         result="bluralpha"
+         id="feColorMatrix4190" />
+      <feOffset
+         result="offsetBlur"
+         dy="0.100000"
+         dx="2.000000"
+         in="bluralpha"
+         id="feOffset4192" />
+      <feMerge
+         id="feMerge4194">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode4196" />
+        <feMergeNode
+           in="fbSourceGraphic"
+           id="feMergeNode4198" />
+      </feMerge>
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter4226">
+      <feGaussianBlur
+         id="feGaussianBlur4228"
+         stdDeviation="0.27510791" />
+    </filter>
+  </defs>
+  <g style="stroke:#B39B14">
+  <path
+     d="m 68.275423,4.9512706 a 51.336864,51.076271 0 1 1 -102.673729,0 51.336864,51.076271 0 1 1 102.673729,0 z"
+     transform="matrix(0.4959168,0,0,0.49844699,23.681542,29.646234)"
+     id="path3694"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0.99963737;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3696)" />
+  <path
+     d="m 18.58418,27.739188 0.01309,-0.0027 -4.169491,3.84375 3.974046,4.039195 -2.084745,1.954449 -5.993644,-6.123941 6.254237,-5.863347 2.006502,2.152605 z"
+     id="path2836"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 35.645184,18.817952 0.0027,0.01309 -3.84375,-4.169491 -4.039195,3.974046 -1.954449,-2.084745 6.123941,-5.993645 5.863347,6.254238 -2.152605,2.006502 z"
+     id="path2836-1"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 27.778817,44.475469 -0.0027,-0.01309 3.84375,4.169491 4.039195,-3.974046 1.954449,2.084745 -6.123941,5.993644 -5.863347,-6.254237 2.152605,-2.006502 z"
+     id="path2836-4"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 44.637113,35.877315 -0.01309,0.0027 4.169491,-3.84375 -3.974046,-4.039195 2.084745,-1.954449 5.993644,6.123941 -6.254237,5.863347 -2.006502,-2.152605 z"
+     id="path2836-1-4"
+     style="fill:#B39B14;fill-opacity:1;stroke:none" />
+  <path
+     d="m 35.871081,37.288902 1.19637,-1.794555 1.26283,-2.25981 0.79758,-3.655575 -1.1299,-1.595161 -1.3293,0.996976 -0.79758,2.25981 0.0665,-4.519621 -1.92748,0.13293 -0.33233,3.788506 -0.0665,-4.386691 -1.92749,-0.06647 0.0665,3.921436 -1.3293,-1.06344 0.0665,-1.728091 -2.25981,-0.199395 -0.46525,2.126881 2.19334,2.459205 -2.92446,-0.66465 -0.13293,2.193345 1.39577,1.129905 1.1299,1.46223 1.66163,1.46223"
+     id="path4200"
+     style="fill:none;stroke-width:0.40000001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.99415205;stroke-dasharray:none;filter:url(#filter4226)" />
+  <g
+     onclick="panZoom.zoomIn();"
+     id="ZoomIn">
+    <path
+       d="m 41.540844,75.846165 -0.0897,14.985927 -17.58828,-0.08974"
+       id="path4245"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 23.683364,75.935901 0.0897,13.99883 17.22933,-0.08974 -0.17947,-13.909094"
+       id="path4232"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,-0.98675774,-128.87679,91.594199)"
+       id="path4241"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 32.230414,76.991732 0.0238,7.46195"
+       id="path4249"
+       style="fill:#ffffff;stroke-width:1.98008847;stroke-opacity:1" />
+    <path
+       d="m 28.363214,80.612923 7.74993,0 -7.74993,0 z"
+       id="path4251"
+       style="fill:#ffffff;stroke-width:1.84633887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     transform="translate(2.3022537,3.699402)"
+     onclick="panZoom.zoomOut();"
+     id="ZoomOut">
+    <path
+       d="M 39.320482,89.514025 39.180261,102.27412"
+       id="path4338"
+       style="fill:#ffffff;;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 21.484491,102.34319 0.0897,-13.998827 17.22933,0.08974 -0.17947,13.909097"
+       id="path4232-2"
+       style="fill:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,0.98675774,-130.59886,86.683287)"
+       id="path4241-4-1"
+       style="fill:#ffffff;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.87134507;stroke-dasharray:none" />
+    <path
+       d="m 185.4845,16.219238 a 9.2428179,4.8457489 0 0 1 -18.48493,0.05967"
+       transform="matrix(0.9140012,0,0,0.98675774,-131.05531,86.167363)"
+       id="path4241-4"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.23615646;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 25.802333,97.053049 7.74993,0 -7.74993,0 z"
+       id="path4251-5"
+       style="fill:#ffffff;stroke-width:1.84633887px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="8.5363598"
+     y="25.281897"
+     id="PanLeft"
+     onclick="panZoom.panBy({x:getInnerWidth()/10,y:0})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="24.525877"
+     y="9.6399784"
+     id="PanUp"
+     onclick="panZoom.panBy({x:0,y:getInnerHeight()/10})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="40.051929"
+     y="24.934298"
+     id="PanRight"
+     onclick="panZoom.panBy({x:-getInnerWidth()/10,y:0})"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+  <rect
+     width="14.906313"
+     height="14.211117"
+     x="23.830681"
+     y="41.155548"
+     id="PanDown"
+     onclick="panZoom.panBy({x:0,y:-getInnerHeight()/10});"
+     style="fill:#dbdce9;opacity:0;cursor:pointer" />
+</g>
+</svg>
+	<g id="GenoPro" x="60" y="20" opacity='0.7' style="font-size:8px; stroke:none; text-anchor:middle; fill:darkblue" background-color="white">
+		<a xlink:href='http://www.genopro.com/' target='_blank'>
+			<text cursor="pointer">
+				<tspan dy="8" x="45">Created using GenoPro®</tspan>
+			</text>
+			<title>Click for details.</title>
+	  </a>
+  </g>
+
+</svg>
+
+<div class="clear" style="height:1%;"></div>
+<noscript>
+<embed src="genomap28.svg" id="svgEmbed" height="88%" width="100%" type="image/svg+xml" border="2" pluginspage='http://www.adobe.com/svg/viewer/install/' />
+</noscript>
+</body>
+</html>
+
